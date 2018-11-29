@@ -3,10 +3,14 @@ package com.ipiecoles.java.java230.model;
 import org.hibernate.annotations.Type;
 import org.joda.time.LocalDate;
 
+import javax.persistence.*;
 import java.util.Objects;
 
+@Entity
+@Table(name="Employe")
 public abstract class Employe {
 
+	@Id
 	private Long id;
 
 	private String nom;
