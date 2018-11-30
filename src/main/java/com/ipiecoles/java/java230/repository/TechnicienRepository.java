@@ -12,6 +12,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface EmployeRepository extends BaseEmployeRepository<Employe> {
+public interface TechnicienRepository extends BaseEmployeRepository<Employe> {
+
+
 
 }

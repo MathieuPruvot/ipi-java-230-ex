@@ -5,6 +5,9 @@ import org.joda.time.LocalDate;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Commercial extends Employe {
 
 	private Double caAnnuel = 0d;

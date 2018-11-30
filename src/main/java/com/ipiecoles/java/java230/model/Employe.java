@@ -1,5 +1,6 @@
 package com.ipiecoles.java.java230.model;
 
+import com.ipiecoles.java.java230.repository.BaseEmployeRepository;
 import org.hibernate.annotations.Type;
 import org.joda.time.LocalDate;
 
@@ -9,7 +10,8 @@ import java.util.Objects;
 
 @Entity
 @Table(name="Employe")
-public class Employe implements Serializable {
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class Employe implements Serializable{
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -46,7 +48,7 @@ public class Employe implements Serializable {
 		return Entreprise.NB_CONGES_BASE;
 	}
 	
-	//public abstract Double getPrimeAnnuelle();
+	public abstract Double getPrimeAnnuelle();
 
 	public void augmenterSalaire(Double pourcentage) {
 		this.salaire = this.getSalaire() * (1 + pourcentage);
