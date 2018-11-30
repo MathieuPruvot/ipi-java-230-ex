@@ -15,19 +15,19 @@ public interface EmployeRepository extends PagingAndSortingRepository<Employe, L
     Employe findByMatricule(String matricule);
 
     List<Employe> findByNomAndPrenom(String nom, String prenom);
-/*
+
     List<Employe> findByNomIgnoreCase(String nom);
-    //Overload
-    Page<Employe> findByNomIgnoreCase(String nom,  Pageable pageable);
 
     List<Employe> findByNomOrPrenomAllIgnoreCase(String nomeOuPrenom);
 
-    List<Employe> findByNomOrPrenomAllIgnoreCase();
-*/
+    Page<Employe> findByNomIgnoreCase(String nom,  Pageable pageable);
+
     List<Employe> findByDateEmbaucheBefore(LocalDate dateEmbauche);
 
     List<Employe> findByDateEmbaucheAfter(LocalDate dateEmbauche);
 
     List<Employe> findBySalaireGreaterThanOrderBySalaireDesc(Double salaire);
+
+    Page<Employe> OrderByDateEmbaucheDesc(Pageable pageable);
 
 }
