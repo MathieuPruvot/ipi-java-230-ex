@@ -1,6 +1,9 @@
 package com.ipiecoles.java.java230.model;
 
+import com.ipiecoles.java.java230.repository.EmployeRepository;
 import org.joda.time.LocalDate;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public class Commercial extends Employe {
 
@@ -82,4 +85,5 @@ public class Commercial extends Employe {
 				", performance=" + performance +
 				"} " + super.toString();
 	}
+
 }
